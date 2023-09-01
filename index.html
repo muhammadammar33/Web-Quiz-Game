@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Quiz Game</h1>
+        <div id="question-container" style="display: none;">
+            <p id="question-text"></p>
+            <div id="options-container">
+                <button class="option" onclick="checkAnswer(0)"></button>
+                <button class="option" onclick="checkAnswer(1)"></button>
+                <button class="option" onclick="checkAnswer(2)"></button>
+                <button class="option" onclick="checkAnswer(3)"></button>
+            </div>
+            <div id="feedback-container">
+                <p id="feedback-text"></p>
+            </div>
+            <div id="progress-container">
+                <p id="progress-text">Question <span id="current-question">1</span> of 10</p>
+            </div>
+        </div>
+        <div id="timer-container">
+            <p id="timer-text">Time Left: <span id="timer">100</span> seconds</p>
+        </div>
+        <button id="next-button" onclick="nextQuestion()" style="display: none;">Next</button>
+        <button id="start-button" onclick="startQuiz()">Start Quiz</button>
+        <div id="final-score-container" style="display: none;">
+            <h2>Your Score</h2>
+            <p id="final-score">0</p>
+        </div>
+        <button id="retake-button" onclick="retakeQuiz()" style="display: none;">Retake Quiz</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="questions.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>   
